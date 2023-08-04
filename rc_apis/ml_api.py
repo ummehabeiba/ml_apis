@@ -15,8 +15,8 @@ class model_input(BaseModel):
     service_name:str
     
 #loading the saved model
-services=pickle.load(open('C:/Users/user/Desktop/RecommendationAPIS/models/services.pkl','rb'))
-similarity=pickle.load(open('C:/Users/user/Desktop/RecommendationAPIS/models/similarity.pkl','rb'))
+services=pickle.load(open('/models/services.pkl','rb'))
+similarity=pickle.load(open('/models/similarity.pkl','rb'))
 
 @app.post('/get_recommendations')
 def get_recommendations(input_parameters:model_input):
